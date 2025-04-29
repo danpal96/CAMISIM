@@ -248,9 +248,9 @@ class DefaultValues(DefaultLogging):
     def _set_default_values(self):
         self._seed = self._seed or self._DEFAULT_seed
         self._phase = self._phase or self._DEFAULT_phase
-        self._phase_gsa = self._phase_gsa or self._DEFAULT_phase_gsa
-        self._phase_pooled_gsa = self._phase_pooled_gsa or self._DEFAULT_phase_pooled_gsa
-        self._phase_anonymize = self._phase_anonymize or self._DEFAULT_phase_anonymize
+        # self._phase_gsa = self._phase_gsa or self._DEFAULT_phase_gsa
+        # self._phase_pooled_gsa = self._phase_pooled_gsa or self._DEFAULT_phase_pooled_gsa
+        # self._phase_anonymize = self._phase_anonymize or self._DEFAULT_phase_anonymize
         self._phase_compress = self._phase_compress or self._DEFAULT_phase_compress
 
         self._compresslevel = self._compresslevel or self._DEFAULT_compresslevel

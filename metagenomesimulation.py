@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 __author__ = 'peter hofmann'
 __version__ = '0.0.6'
@@ -101,7 +101,7 @@ class MetagenomeSimulation(ArgumentHandler):
             # Generate gold standard assembly
             list_of_output_gsa = None
             file_path_output_gsa_pooled = None
-            if self._phase_pooled_gsa:
+            if self._phase_gsa:
                 self._logger.info("Generate gold standard assembly")
                 list_of_output_gsa = self._generate_gsa()
 
@@ -115,8 +115,8 @@ class MetagenomeSimulation(ArgumentHandler):
                 self._logger.info("Anonymize Data")
                 self._logger.debug(", ".join(list_of_output_gsa))
                 self._anonymize_data(list_of_output_gsa, file_path_output_gsa_pooled)
-            #elif self._phase_pooled_gsa: 
-            else: # in any case create binning gold standard
+            if self._phase_pooled_gsa: 
+            # else: # in any case create binning gold standard
                 self._logger.info("Creating binning gold standard")
                 self._logger.debug(", ".join(list_of_output_gsa))
                 self._create_binning_gs(list_of_output_gsa)
